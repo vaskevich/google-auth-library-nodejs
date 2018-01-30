@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ADCCallback | google-auth-library</title>
+	<title>ComputeOptions | google-auth-library</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,13 +54,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_auth_googleauth_.html">&quot;auth/googleauth&quot;</a>
+					<a href="../modules/_auth_computeclient_.html">&quot;auth/computeclient&quot;</a>
 				</li>
 				<li>
-					<a href="_auth_googleauth_.adccallback.html">ADCCallback</a>
+					<a href="_auth_computeclient_.computeoptions.html">ComputeOptions</a>
 				</li>
 			</ul>
-			<h1>Interface ADCCallback</h1>
+			<h1>Interface ComputeOptions</h1>
 		</div>
 	</div>
 </header>
@@ -71,37 +71,41 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ADCCallback</span>
+						<a href="_auth_oauth2client_.refreshoptions.html" class="tsd-signature-type">RefreshOptions</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">ComputeOptions</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel">
-				<h3 class="tsd-before-signature">Callable</h3>
-				<ul class="tsd-signatures tsd-kind-interface tsd-parent-kind-external-module">
-					<li class="tsd-signature tsd-kind-icon">__call<span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span>, credential<span class="tsd-signature-symbol">?: </span><a href="../classes/_auth_oauth2client_.oauth2client.html" class="tsd-signature-type">OAuth2Client</a>, projectId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/googleauth.ts#L43">auth/googleauth.ts:43</a></li>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_auth_computeclient_.computeoptions.html#eagerrefreshthresholdmillis" class="tsd-kind-icon">eager<wbr>Refresh<wbr>Threshold<wbr>Millis</a></li>
 							</ul>
-						</aside>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>err: <span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
-							</li>
-							<li>
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> credential: <a href="../classes/_auth_oauth2client_.oauth2client.html" class="tsd-signature-type">OAuth2Client</a></h5>
-							</li>
-							<li>
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> projectId: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
-							</li>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="eagerrefreshthresholdmillis" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> eager<wbr>Refresh<wbr>Threshold<wbr>Millis</h3>
+					<div class="tsd-signature tsd-kind-icon">eager<wbr>Refresh<wbr>Threshold<wbr>Millis<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_auth_oauth2client_.refreshoptions.html">RefreshOptions</a>.<a href="_auth_oauth2client_.refreshoptions.html#eagerrefreshthresholdmillis">eagerRefreshThresholdMillis</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L231">auth/oauth2client.ts:231</a></li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-					</li>
-				</ul>
+					</aside>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -113,13 +117,13 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_auth_authclient_.html">"auth/authclient"</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="../modules/_auth_computeclient_.html">"auth/computeclient"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_auth_credentials_.html">"auth/credentials"</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_auth_googleauth_.html">"auth/googleauth"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -157,30 +161,20 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="../classes/_auth_googleauth_.googleauth.html" class="tsd-kind-icon">Google<wbr>Auth</a>
+						<a href="../classes/_auth_computeclient_.compute.html" class="tsd-kind-icon">Compute</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_auth_googleauth_.adccallback.html" class="tsd-kind-icon">ADCCallback</a>
+						<a href="_auth_computeclient_.computeoptions.html" class="tsd-kind-icon">Compute<wbr>Options</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_auth_computeclient_.computeoptions.html#eagerrefreshthresholdmillis" class="tsd-kind-icon">eager<wbr>Refresh<wbr>Threshold<wbr>Millis</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_auth_googleauth_.adcresponse.html" class="tsd-kind-icon">ADCResponse</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_auth_googleauth_.credentialbody.html" class="tsd-kind-icon">Credential<wbr>Body</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_auth_googleauth_.credentialcallback.html" class="tsd-kind-icon">Credential<wbr>Callback</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_auth_googleauth_.credentialresult.html" class="tsd-kind-icon">Credential<wbr>Result</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_auth_googleauth_.projectidcallback.html" class="tsd-kind-icon">Project<wbr>IdCallback</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

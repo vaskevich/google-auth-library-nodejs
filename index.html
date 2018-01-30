@@ -64,18 +64,19 @@
 			<div class="tsd-panel tsd-typography">
 				<p><img src="https://avatars0.githubusercontent.com/u/1342004?v=3&s=96" alt="Google Inc. logo" title="Google" align="right" height="96" width="96"/></p>
 				<h1 id="google-auth-library">Google Auth Library</h1>
-				<p><a href="https://www.npmjs.org/package/google-auth-library"><img src="https://img.shields.io/npm/v/google-auth-library.svg" alt="npm version"></a>
-					<a href="https://travis-ci.org/google/google-auth-library-nodejs"><img src="https://api.travis-ci.org/google/google-auth-library-nodejs.svg" alt="Build Status"></a>
-					<a href="https://coveralls.io/r/google/google-auth-library-nodejs?branch=master"><img src="https://img.shields.io/coveralls/google/google-auth-library-nodejs.svg" alt="Code Coverage"></a>
+				<p><a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/google/google-auth-library-nodejs.svg" alt="Greenkeeper badge"></a>
+					<a href="https://www.npmjs.org/package/google-auth-library"><img src="https://img.shields.io/npm/v/google-auth-library.svg" alt="npm version"></a>
+					<a href="https://circleci.com/gh/google/google-auth-library-nodejs"><img src="https://circleci.com/gh/google/google-auth-library-nodejs.svg?style=svg" alt="CircleCI"></a>
+					<a href="https://codecov.io/gh/google/google-auth-library-nodejs"><img src="https://codecov.io/gh/google/google-auth-library-nodejs/branch/master/graph/badge.svg" alt="codecov"></a>
 					<a href="https://david-dm.org/google/google-auth-library-nodejs"><img src="https://david-dm.org/google/google-auth-library-nodejs/status.svg" alt="Dependencies"></a>
-				<a href="https://snyk.io/test/github/google/google-auth-library"><img src="https://snyk.io/test/github/google/google-auth-library/badge.svg" alt="Known Vulnerabilities"></a></p>
+				<a href="https://snyk.io/test/github/google/google-auth-library-nodejs"><img src="https://snyk.io/test/github/google/google-auth-library-nodejs/badge.svg" alt="Known Vulnerabilities"></a></p>
 				<p>This is Google&#39;s officially supported <a href="http://nodejs.org/">node.js</a> client library for using OAuth 2.0 authorization and authentication with Google APIs.</p>
 				<h2 id="installation">Installation</h2>
 				<p>This library is distributed on <code>npm</code>. To add it as a dependency, run the following command:</p>
 				<pre><code class="lang-sh">$ npm install google-auth-library
 </code></pre>
 				<h2 id="upgrading-to-1-x">Upgrading to 1.x</h2>
-				<p>The <code>1.x</code> release includes a variety of bug fixes, new features, and breaking changes. Please take care, and see <a href="https://github.com/google/google-auth-library-nodejs/releases/tag/1.0.0-alpha.1">the release notes</a> for a list of breaking changes, and the upgrade guide.</p>
+				<p>The <code>1.x</code> release includes a variety of bug fixes, new features, and breaking changes. Please take care, and see <a href="https://github.com/google/google-auth-library-nodejs/releases/tag/v1.0.0">the release notes</a> for a list of breaking changes, and the upgrade guide.</p>
 				<h2 id="ways-to-authenticate">Ways to authenticate</h2>
 				<p>This library provides a variety of ways to authenticate to your Google services.</p>
 				<ul>
@@ -99,22 +100,16 @@
 				<p>Rather than manually creating an OAuth2 client, JWT client, or Compute client, the auth library can create the correct credential type for you, depending upon the environment your code is running under.</p>
 				<p>For example, a JWT auth client will be created when your code is running on your local developer machine, and a Compute client will be created when the same code is running on Google Cloud Platform.</p>
 				<p>The code below shows how to retrieve a default credential type, depending upon the runtime environment. The createScopedRequired must be called to determine when you need to pass in the scopes manually, and when they have been set for you automatically based on the configured runtime environment.</p>
-				<pre><code class="lang-js"><span class="hljs-keyword">const</span> GoogleAuth = <span class="hljs-built_in">require</span>(<span class="hljs-string">'google-auth-library'</span>).GoogleAuth;
-<span class="hljs-keyword">const</span> auth = <span class="hljs-keyword">new</span> GoogleAuth();
+				<pre><code class="lang-js"><span class="hljs-keyword">const</span> {auth} = <span class="hljs-built_in">require</span>(<span class="hljs-string">'google-auth-library'</span>);
 
 <span class="hljs-comment">/**
  * Acquire a client, and make a request to an API that's enabled by default.
  */</span>
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">try</span> {
-    <span class="hljs-keyword">const</span> adc = <span class="hljs-keyword">await</span> getADC();
-    <span class="hljs-keyword">const</span> url = <span class="hljs-string">`https://www.googleapis.com/dns/v1/projects/<span class="hljs-subst">${adc.projectId}</span>`</span>;
-    <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> adc.client.request({url});
-    <span class="hljs-built_in">console</span>.log(res.data);
-  } <span class="hljs-keyword">catch</span> (e) {
-    <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Error making request.'</span>);
-    <span class="hljs-built_in">console</span>.error(e);
-  }
+  <span class="hljs-keyword">const</span> adc = <span class="hljs-keyword">await</span> getADC();
+  <span class="hljs-keyword">const</span> url = <span class="hljs-string">`https://www.googleapis.com/dns/v1/projects/<span class="hljs-subst">${adc.projectId}</span>`</span>;
+  <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> adc.client.request({url});
+  <span class="hljs-built_in">console</span>.log(res.data);
 }
 
 <span class="hljs-comment">/**
@@ -142,7 +137,7 @@
   }
 }
 
-main();
+main().catch(<span class="hljs-built_in">console</span>.error);
 </code></pre>
 				<h4 id="oauth2-client">OAuth2 client</h4>
 				<p>This client comes with an <a href="https://developers.google.com/accounts/docs/OAuth2">OAuth2</a> client that allows you to retrieve an access token and refreshes the token and retry the request seamlessly if you also provide an <code>expiry_date</code> and the token is expired. The basics of Google&#39;s OAuth2 implementation is explained on <a href="https://developers.google.com/accounts/docs/OAuth2Login">Google Authorization and Authentication documentation</a>.</p>
@@ -150,7 +145,7 @@ main();
 				<p>For more information about OAuth2 and how it works, <a href="https://developers.google.com/accounts/docs/OAuth2">see here</a>.</p>
 				<h5 id="a-complete-oauth2-example">A complete OAuth2 example</h5>
 				<p>Let&#39;s take a look at a complete example.</p>
-				<pre><code class="lang-js"><span class="hljs-keyword">const</span> OAuth2Client = <span class="hljs-built_in">require</span>(<span class="hljs-string">'google-auth-library'</span>).OAuth2Client;
+				<pre><code class="lang-js"><span class="hljs-keyword">const</span> {OAuth2Client} = <span class="hljs-built_in">require</span>(<span class="hljs-string">'google-auth-library'</span>);
 <span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">'http'</span>);
 <span class="hljs-keyword">const</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">'url'</span>);
 <span class="hljs-keyword">const</span> querystring = <span class="hljs-built_in">require</span>(<span class="hljs-string">'querystring'</span>);
@@ -253,35 +248,25 @@ oauth2Client.setCredentials(tokens);
 </code></pre>
 				<h4 id="using-json-web-tokens">Using JSON Web Tokens</h4>
 				<p>The Google Developers Console provides <code>.json</code> file that you can use to configure a JWT auth client and authenticate your requests, for example when using a service account.</p>
-				<pre><code class="lang-js"><span class="hljs-keyword">const</span> JWTClient = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../build/src/index'</span>).JWT;
+				<pre><code class="lang-js"><span class="hljs-keyword">const</span> {JWT} = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../build/src/index'</span>);
 <span class="hljs-keyword">const</span> keys = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./jwt.keys.json'</span>);
 
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">try</span> {
-    <span class="hljs-keyword">const</span> client = <span class="hljs-keyword">await</span> getJWTClient();
-    <span class="hljs-keyword">const</span> url = <span class="hljs-string">`https://www.googleapis.com/dns/v1/projects/<span class="hljs-subst">${keys.project_id}</span>`</span>;
-    <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> client.request({url});
-    <span class="hljs-built_in">console</span>.log(res.data);
-  } <span class="hljs-keyword">catch</span>(e) {
-    <span class="hljs-built_in">console</span>.error(e);
-  }
-  process.exit();
-}
-
-<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getJWTClient</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> JWTClient(
+  <span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> JWT(
     keys.client_email,
     <span class="hljs-literal">null</span>,
     keys.private_key,
     [<span class="hljs-string">'https://www.googleapis.com/auth/cloud-platform'</span>],
   );
   <span class="hljs-keyword">await</span> client.authorize();
-  <span class="hljs-keyword">return</span> client;
+  <span class="hljs-keyword">const</span> url = <span class="hljs-string">`https://www.googleapis.com/dns/v1/projects/<span class="hljs-subst">${keys.project_id}</span>`</span>;
+  <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> client.request({url});
+  <span class="hljs-built_in">console</span>.log(res.data);
 }
 
-main();
+main().catch(<span class="hljs-built_in">console</span>.error);
 </code></pre>
-				<p>The parameters for the JWT auth client including how to use it with a <code>.pem</code> file are explained in <a href="samples/jwt.js">samples/jwt.js</a>.</p>
+				<p>The parameters for the JWT auth client including how to use it with a <code>.pem</code> file are explained in <a href="examples/jwt.js">examples/jwt.js</a>.</p>
 				<h4 id="loading-credentials-from-environment-variables">Loading credentials from environment variables</h4>
 				<p>Instead of loading credentials from a key file, you can also provide them using an environment variable and the <code>GoogleAuth.fromJSON()</code> method.  This is particularly convenient for systems that deploy directly from source control (Heroku, App Engine, etc).</p>
 				<p>Start by exporting your credentials:</p>
@@ -298,7 +283,7 @@ main();
   <span class="hljs-string">"client_x509_cert_url"</span>: <span class="hljs-string">"your-cert-url"</span>
 }<span class="hljs-string">'</span>
 </code></pre><p>Now you can create a new client from the credentials:</p>
-				<pre><code class="lang-js"><span class="hljs-keyword">const</span> {GoogleAuth} = <span class="hljs-built_in">require</span>(<span class="hljs-string">'google-auth-library'</span>);
+				<pre><code class="lang-js"><span class="hljs-keyword">const</span> {auth} = <span class="hljs-built_in">require</span>(<span class="hljs-string">'google-auth-library'</span>);
 
 <span class="hljs-comment">// load the environment variable with our keys</span>
 <span class="hljs-keyword">const</span> keysEnvVar = process.env[<span class="hljs-string">'CREDS'</span>];
@@ -308,7 +293,6 @@ main();
 <span class="hljs-keyword">const</span> keys = <span class="hljs-built_in">JSON</span>.parse(keysEnvVar);
 
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">const</span> auth = <span class="hljs-keyword">new</span> GoogleAuth();
   <span class="hljs-comment">// load the JWT or UserRefreshClient from the keys</span>
   <span class="hljs-keyword">const</span> client = auth.fromJSON(keys);
   client.scopes = [<span class="hljs-string">'https://www.googleapis.com/auth/cloud-platform'</span>];
@@ -323,13 +307,13 @@ main().catch(<span class="hljs-built_in">console</span>.error);
 				<h4 id="using-a-proxy">Using a Proxy</h4>
 				<p>You can use the following environment variables to proxy HTTP and HTTPS requests:</p>
 				<ul>
-					<li>HTTP_PROXY / http_proxy</li>
-					<li>HTTPS_PROXY / https_proxy</li>
+					<li><code>HTTP_PROXY</code> / <code>http_proxy</code></li>
+					<li><code>HTTPS_PROXY</code> / <code>https_proxy</code></li>
 				</ul>
 				<p>When HTTP_PROXY / http_proxy are set, they will be used to proxy non-SSL requests that do not have an explicit proxy configuration option present. Similarly, HTTPS_PROXY / https_proxy will be respected for SSL requests that do not have an explicit proxy configuration option. It is valid to define a proxy in one of the environment variables, but then override it for a specific request, using the proxy configuration option.</p>
 				<h3 id="questions-problems-">Questions/problems?</h3>
 				<ul>
-					<li>Ask your development related questions on <a href="http://stackoverflow.com/questions/tagged/google-auth-library-nodejs"><img src="https://googledrive.com/host/0ByfSjdPVs9MZbkhjeUhMYzRTeEE/stackoveflow-tag.png" alt="Ask a question on Stackoverflow"></a></li>
+					<li>Ask your development related questions on <a href="http://stackoverflow.com/questions/tagged/google-auth-library-nodejs">Stack Overflow</a>.</li>
 					<li>If you&#39;ve found an bug/issue, please <a href="https://github.com/google/google-auth-library-nodejs/issues">file it on GitHub</a>.</li>
 				</ul>
 				<h2 id="contributing">Contributing</h2>

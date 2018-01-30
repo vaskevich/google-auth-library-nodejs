@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FederatedSignonCertsResponse | google-auth-library</title>
+	<title>OAuth2ClientOptions | google-auth-library</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,10 @@
 					<a href="../modules/_auth_oauth2client_.html">&quot;auth/oauth2client&quot;</a>
 				</li>
 				<li>
-					<a href="_auth_oauth2client_.federatedsignoncertsresponse.html">FederatedSignonCertsResponse</a>
+					<a href="_auth_oauth2client_.oauth2clientoptions.html">OAuth2ClientOptions</a>
 				</li>
 			</ul>
-			<h1>Interface FederatedSignonCertsResponse</h1>
+			<h1>Interface OAuth2ClientOptions</h1>
 		</div>
 	</div>
 </header>
@@ -71,7 +71,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">FederatedSignonCertsResponse</span>
+						<a href="_auth_oauth2client_.refreshoptions.html" class="tsd-signature-type">RefreshOptions</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">OAuth2ClientOptions</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -82,8 +87,12 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_auth_oauth2client_.federatedsignoncertsresponse.html#certs" class="tsd-kind-icon">certs</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_auth_oauth2client_.federatedsignoncertsresponse.html#res" class="tsd-kind-icon">res</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_auth_oauth2client_.oauth2clientoptions.html#authbaseurl" class="tsd-kind-icon">auth<wbr>Base<wbr>Url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_auth_oauth2client_.oauth2clientoptions.html#clientid" class="tsd-kind-icon">client<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_auth_oauth2client_.oauth2clientoptions.html#clientsecret" class="tsd-kind-icon">client<wbr>Secret</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_auth_oauth2client_.oauth2clientoptions.html#eagerrefreshthresholdmillis" class="tsd-kind-icon">eager<wbr>Refresh<wbr>Threshold<wbr>Millis</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_auth_oauth2client_.oauth2clientoptions.html#redirecturi" class="tsd-kind-icon">redirect<wbr>Uri</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_auth_oauth2client_.oauth2clientoptions.html#tokenurl" class="tsd-kind-icon">token<wbr>Url</a></li>
 							</ul>
 						</section>
 					</div>
@@ -92,22 +101,63 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="certs" class="tsd-anchor"></a>
-					<h3>certs</h3>
-					<div class="tsd-signature tsd-kind-icon">certs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<a name="authbaseurl" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> auth<wbr>Base<wbr>Url</h3>
+					<div class="tsd-signature tsd-kind-icon">auth<wbr>Base<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L207">auth/oauth2client.ts:207</a></li>
+							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L223">auth/oauth2client.ts:223</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="res" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> res</h3>
-					<div class="tsd-signature tsd-kind-icon">res<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
+					<a name="clientid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> client<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">client<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L208">auth/oauth2client.ts:208</a></li>
+							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L220">auth/oauth2client.ts:220</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="clientsecret" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> client<wbr>Secret</h3>
+					<div class="tsd-signature tsd-kind-icon">client<wbr>Secret<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L221">auth/oauth2client.ts:221</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="eagerrefreshthresholdmillis" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> eager<wbr>Refresh<wbr>Threshold<wbr>Millis</h3>
+					<div class="tsd-signature tsd-kind-icon">eager<wbr>Refresh<wbr>Threshold<wbr>Millis<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_auth_oauth2client_.refreshoptions.html">RefreshOptions</a>.<a href="_auth_oauth2client_.refreshoptions.html#eagerrefreshthresholdmillis">eagerRefreshThresholdMillis</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L231">auth/oauth2client.ts:231</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="redirecturi" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> redirect<wbr>Uri</h3>
+					<div class="tsd-signature tsd-kind-icon">redirect<wbr>Uri<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L222">auth/oauth2client.ts:222</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="tokenurl" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> token<wbr>Url</h3>
+					<div class="tsd-signature tsd-kind-icon">token<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L224">auth/oauth2client.ts:224</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -174,21 +224,9 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="_auth_oauth2client_.authclientopts.html" class="tsd-kind-icon">Auth<wbr>Client<wbr>Opts</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="_auth_oauth2client_.federatedsignoncertsresponse.html" class="tsd-kind-icon">Federated<wbr>Signon<wbr>Certs<wbr>Response</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_auth_oauth2client_.federatedsignoncertsresponse.html#certs" class="tsd-kind-icon">certs</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_auth_oauth2client_.federatedsignoncertsresponse.html#res" class="tsd-kind-icon">res</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="_auth_oauth2client_.generateauthurlopts.html" class="tsd-kind-icon">Generate<wbr>Auth<wbr>Url<wbr>Opts</a>
 					</li>
@@ -210,9 +248,33 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="_auth_oauth2client_.gettokenresponse.html" class="tsd-kind-icon">Get<wbr>Token<wbr>Response</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="_auth_oauth2client_.oauth2clientoptions.html" class="tsd-kind-icon">OAuth2<wbr>Client<wbr>Options</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_auth_oauth2client_.oauth2clientoptions.html#authbaseurl" class="tsd-kind-icon">auth<wbr>Base<wbr>Url</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_auth_oauth2client_.oauth2clientoptions.html#clientid" class="tsd-kind-icon">client<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_auth_oauth2client_.oauth2clientoptions.html#clientsecret" class="tsd-kind-icon">client<wbr>Secret</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_auth_oauth2client_.oauth2clientoptions.html#eagerrefreshthresholdmillis" class="tsd-kind-icon">eager<wbr>Refresh<wbr>Threshold<wbr>Millis</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_auth_oauth2client_.oauth2clientoptions.html#redirecturi" class="tsd-kind-icon">redirect<wbr>Uri</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_auth_oauth2client_.oauth2clientoptions.html#tokenurl" class="tsd-kind-icon">token<wbr>Url</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="_auth_oauth2client_.refreshaccesstokencallback.html" class="tsd-kind-icon">Refresh<wbr>Access<wbr>Token<wbr>Callback</a>
 					</li>

@@ -97,9 +97,11 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_auth_refreshclient_.userrefreshclient.html#_clientsecret" class="tsd-kind-icon">_client<wbr>Secret</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_auth_refreshclient_.userrefreshclient.html#_refreshtoken" class="tsd-kind-icon">_refresh<wbr>Token</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_auth_refreshclient_.userrefreshclient.html#apikey" class="tsd-kind-icon">api<wbr>Key</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_auth_refreshclient_.userrefreshclient.html#authbaseurl" class="tsd-kind-icon">auth<wbr>Base<wbr>Url</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_auth_refreshclient_.userrefreshclient.html#credentials" class="tsd-kind-icon">credentials</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_auth_refreshclient_.userrefreshclient.html#opts" class="tsd-kind-icon">opts</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_auth_refreshclient_.userrefreshclient.html#eagerrefreshthresholdmillis" class="tsd-kind-icon">eager<wbr>Refresh<wbr>Threshold<wbr>Millis</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_auth_refreshclient_.userrefreshclient.html#projectid" class="tsd-kind-icon">project<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_auth_refreshclient_.userrefreshclient.html#tokenurl" class="tsd-kind-icon">token<wbr>Url</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_auth_refreshclient_.userrefreshclient.html#transporter" class="tsd-kind-icon">transporter</a></li>
 							</ul>
 						</section>
@@ -117,6 +119,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_auth_refreshclient_.userrefreshclient.html#getrequestmetadata" class="tsd-kind-icon">get<wbr>Request<wbr>Metadata</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_auth_refreshclient_.userrefreshclient.html#getrequestmetadataasync" class="tsd-kind-icon">get<wbr>Request<wbr>Metadata<wbr>Async</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_auth_refreshclient_.userrefreshclient.html#gettoken" class="tsd-kind-icon">get<wbr>Token</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_auth_refreshclient_.userrefreshclient.html#istokenexpiring" class="tsd-kind-icon">is<wbr>Token<wbr>Expiring</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_auth_refreshclient_.userrefreshclient.html#refreshaccesstoken" class="tsd-kind-icon">refresh<wbr>Access<wbr>Token</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-private"><a href="_auth_refreshclient_.userrefreshclient.html#refreshtoken" class="tsd-kind-icon">refresh<wbr>Token</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite tsd-is-inherited"><a href="_auth_refreshclient_.userrefreshclient.html#request" class="tsd-kind-icon">request</a></li>
@@ -138,13 +141,15 @@
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">new <wbr>User<wbr>Refresh<wbr>Client<span class="tsd-signature-symbol">(</span>clientId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, clientSecret<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, refreshToken<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_auth_refreshclient_.userrefreshclient.html" class="tsd-signature-type">UserRefreshClient</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>User<wbr>Refresh<wbr>Client<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/_auth_refreshclient_.userrefreshclientoptions.html" class="tsd-signature-type">UserRefreshClientOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_auth_refreshclient_.userrefreshclient.html" class="tsd-signature-type">UserRefreshClient</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>User<wbr>Refresh<wbr>Client<span class="tsd-signature-symbol">(</span>clientId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, clientSecret<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, refreshToken<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_auth_refreshclient_.userrefreshclient.html" class="tsd-signature-type">UserRefreshClient</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/refreshclient.ts#L25">auth/refreshclient.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/refreshclient.ts#L31">auth/refreshclient.ts:31</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -155,6 +160,67 @@
 									<dt>constructor</dt>
 									<dd></dd>
 								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> clientId: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The authentication client ID.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> clientSecret: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The authentication client secret.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> refreshToken: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The authentication refresh token.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_auth_refreshclient_.userrefreshclient.html" class="tsd-signature-type">UserRefreshClient</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#constructor">constructor</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/refreshclient.ts#L41">auth/refreshclient.ts:41</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>User Refresh Token credentials.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <a href="../interfaces/_auth_refreshclient_.userrefreshclientoptions.html" class="tsd-signature-type">UserRefreshClientOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_auth_refreshclient_.userrefreshclient.html" class="tsd-signature-type">UserRefreshClient</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#constructor">constructor</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/refreshclient.ts#L42">auth/refreshclient.ts:42</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>User Refresh Token credentials.</p>
+								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -197,7 +263,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#_clientid">_clientId</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L226">auth/oauth2client.ts:226</a></li>
+							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L242">auth/oauth2client.ts:242</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -208,7 +274,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#_clientsecret">_clientSecret</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L229">auth/oauth2client.ts:229</a></li>
+							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L245">auth/oauth2client.ts:245</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -218,7 +284,7 @@
 					<div class="tsd-signature tsd-kind-icon">_refresh<wbr>Token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/refreshclient.ts#L25">auth/refreshclient.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/refreshclient.ts#L31">auth/refreshclient.ts:31</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -229,7 +295,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#apikey">apiKey</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L231">auth/oauth2client.ts:231</a></li>
+							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L247">auth/oauth2client.ts:247</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="authbaseurl" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> auth<wbr>Base<wbr>Url</h3>
+					<div class="tsd-signature tsd-kind-icon">auth<wbr>Base<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#authbaseurl">authBaseUrl</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L238">auth/oauth2client.ts:238</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -240,18 +317,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_auth_authclient_.authclient.html">AuthClient</a>.<a href="_auth_authclient_.authclient.html#credentials">credentials</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/authclient.ts#L23">auth/authclient.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/authclient.ts#L23">auth/authclient.ts:23</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-					<a name="opts" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> opts</h3>
-					<div class="tsd-signature tsd-kind-icon">opts<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_auth_oauth2client_.authclientopts.html" class="tsd-signature-type">AuthClientOpts</a></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="eagerrefreshthresholdmillis" class="tsd-anchor"></a>
+					<h3>eager<wbr>Refresh<wbr>Threshold<wbr>Millis</h3>
+					<div class="tsd-signature tsd-kind-icon">eager<wbr>Refresh<wbr>Threshold<wbr>Millis<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#opts">opts</a></p>
+						<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#eagerrefreshthresholdmillis">eagerRefreshThresholdMillis</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L223">auth/oauth2client.ts:223</a></li>
+							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L251">auth/oauth2client.ts:251</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -262,7 +339,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#projectid">projectId</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L233">auth/oauth2client.ts:233</a></li>
+							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L249">auth/oauth2client.ts:249</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="tokenurl" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> token<wbr>Url</h3>
+					<div class="tsd-signature tsd-kind-icon">token<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#tokenurl">tokenUrl</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L239">auth/oauth2client.ts:239</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -273,7 +361,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_auth_authclient_.authclient.html">AuthClient</a>.<a href="_auth_authclient_.authclient.html#transporter">transporter</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/authclient.ts#L22">auth/authclient.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/authclient.ts#L22">auth/authclient.ts:22</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -291,7 +379,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#decodebase64">decodeBase64</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L912">auth/oauth2client.ts:912</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L932">auth/oauth2client.ts:932</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -323,7 +411,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/refreshclient.ts#L56">auth/refreshclient.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/refreshclient.ts#L80">auth/refreshclient.ts:80</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -356,7 +444,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/refreshclient.ts#L89">auth/refreshclient.ts:89</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/refreshclient.ts#L113">auth/refreshclient.ts:113</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -379,7 +467,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/refreshclient.ts#L90">auth/refreshclient.ts:90</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/refreshclient.ts#L114">auth/refreshclient.ts:114</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -424,7 +512,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#generateauthurl">generateAuthUrl</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L300">auth/oauth2client.ts:300</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L334">auth/oauth2client.ts:334</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -457,7 +545,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#generatecodeverifier">generateCodeVerifier</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L323">auth/oauth2client.ts:323</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L357">auth/oauth2client.ts:357</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -491,7 +579,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#getaccesstoken">getAccessToken</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L460">auth/oauth2client.ts:460</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L494">auth/oauth2client.ts:494</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -505,7 +593,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#getaccesstoken">getAccessToken</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L461">auth/oauth2client.ts:461</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L495">auth/oauth2client.ts:495</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -530,7 +618,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#getfederatedsignoncerts">getFederatedSignonCerts</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L739">auth/oauth2client.ts:739</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L759">auth/oauth2client.ts:759</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -546,7 +634,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#getfederatedsignoncerts">getFederatedSignonCerts</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L740">auth/oauth2client.ts:740</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L760">auth/oauth2client.ts:760</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -570,7 +658,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#getfederatedsignoncertsasync">getFederatedSignonCertsAsync</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L752">auth/oauth2client.ts:752</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L772">auth/oauth2client.ts:772</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_auth_oauth2client_.federatedsignoncertsresponse.html" class="tsd-signature-type">FederatedSignonCertsResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -589,7 +677,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#getrequestmetadata">getRequestMetadata</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L514">auth/oauth2client.ts:514</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L540">auth/oauth2client.ts:540</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -615,7 +703,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#getrequestmetadata">getRequestMetadata</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L515">auth/oauth2client.ts:515</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L541">auth/oauth2client.ts:541</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -642,7 +730,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#getrequestmetadataasync">getRequestMetadataAsync</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L527">auth/oauth2client.ts:527</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L553">auth/oauth2client.ts:553</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -669,7 +757,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#gettoken">getToken</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L347">auth/oauth2client.ts:347</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L381">auth/oauth2client.ts:381</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -692,7 +780,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#gettoken">getToken</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L348">auth/oauth2client.ts:348</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L382">auth/oauth2client.ts:382</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -707,7 +795,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#gettoken">getToken</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L349">auth/oauth2client.ts:349</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L383">auth/oauth2client.ts:383</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -725,7 +813,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#gettoken">getToken</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L350">auth/oauth2client.ts:350</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L384">auth/oauth2client.ts:384</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -741,6 +829,31 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="istokenexpiring" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> is<wbr>Token<wbr>Expiring</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Token<wbr>Expiring<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#istokenexpiring">isTokenExpiring</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L942">auth/oauth2client.ts:942</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns true if a token is expired or will expire within
+										eagerRefreshThresholdMillismilliseconds.
+									If there is no expiry time, assumes the token is not expired or expiring.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="refreshaccesstoken" class="tsd-anchor"></a>
 					<h3>refresh<wbr>Access<wbr>Token</h3>
@@ -753,7 +866,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#refreshaccesstoken">refreshAccessToken</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L431">auth/oauth2client.ts:431</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L465">auth/oauth2client.ts:465</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -772,7 +885,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#refreshaccesstoken">refreshAccessToken</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L432">auth/oauth2client.ts:432</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L466">auth/oauth2client.ts:466</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -796,7 +909,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#refreshtoken">refreshToken</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/refreshclient.ts#L46">auth/refreshclient.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/refreshclient.ts#L70">auth/refreshclient.ts:70</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -827,15 +940,14 @@
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#request">request</a></p>
 								<p>Overrides <a href="_auth_authclient_.authclient.html">AuthClient</a>.<a href="_auth_authclient_.authclient.html#request">request</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L639">auth/oauth2client.ts:639</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L659">auth/oauth2client.ts:659</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Provides a request implementation with OAuth 2.0 flow.
-										If credentials have a refresh_token, in cases of HTTP
-										401 and 403 responses, it automatically asks for a new
-									access token and replays the unsuccessful request.</p>
+									<p>Provides a request implementation with OAuth 2.0 flow. If credentials have
+										a refresh_token, in cases of HTTP 401 and 403 responses, it automatically
+									asks for a new access token and replays the unsuccessful request.</p>
 								</div>
 							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -861,7 +973,7 @@
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#request">request</a></p>
 								<p>Overrides <a href="_auth_authclient_.authclient.html">AuthClient</a>.<a href="_auth_authclient_.authclient.html#request">request</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L640">auth/oauth2client.ts:640</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L660">auth/oauth2client.ts:660</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -894,7 +1006,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#requestasync">requestAsync</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L654">auth/oauth2client.ts:654</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L674">auth/oauth2client.ts:674</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -928,7 +1040,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#revokecredentials">revokeCredentials</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L606">auth/oauth2client.ts:606</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L627">auth/oauth2client.ts:627</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -942,7 +1054,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#revokecredentials">revokeCredentials</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L607">auth/oauth2client.ts:607</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L628">auth/oauth2client.ts:628</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -967,7 +1079,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#revoketoken">revokeToken</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L579">auth/oauth2client.ts:579</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L600">auth/oauth2client.ts:600</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -990,7 +1102,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#revoketoken">revokeToken</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L580">auth/oauth2client.ts:580</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L601">auth/oauth2client.ts:601</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1017,7 +1129,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_authclient_.authclient.html">AuthClient</a>.<a href="_auth_authclient_.authclient.html#setcredentials">setCredentials</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/authclient.ts#L33">auth/authclient.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/authclient.ts#L33">auth/authclient.ts:33</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1047,7 +1159,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#verifyidtoken">verifyIdToken</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L694">auth/oauth2client.ts:694</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L714">auth/oauth2client.ts:714</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1067,7 +1179,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#verifyidtoken">verifyIdToken</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L695">auth/oauth2client.ts:695</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L715">auth/oauth2client.ts:715</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1115,7 +1227,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_auth_oauth2client_.oauth2client.html">OAuth2Client</a>.<a href="_auth_oauth2client_.oauth2client.html#verifysignedjwtwithcerts">verifySignedJwtWithCerts</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/a2fae64/src/auth/oauth2client.ts#L794">auth/oauth2client.ts:794</a></li>
+									<li>Defined in <a href="https://github.com/JustinBeckwith/google-auth-library-nodejs/blob/c15cc25/src/auth/oauth2client.ts#L814">auth/oauth2client.ts:814</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1236,14 +1348,20 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_auth_refreshclient_.userrefreshclient.html#apikey" class="tsd-kind-icon">api<wbr>Key</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_auth_refreshclient_.userrefreshclient.html#authbaseurl" class="tsd-kind-icon">auth<wbr>Base<wbr>Url</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_auth_refreshclient_.userrefreshclient.html#credentials" class="tsd-kind-icon">credentials</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_auth_refreshclient_.userrefreshclient.html#opts" class="tsd-kind-icon">opts</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_auth_refreshclient_.userrefreshclient.html#eagerrefreshthresholdmillis" class="tsd-kind-icon">eager<wbr>Refresh<wbr>Threshold<wbr>Millis</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_auth_refreshclient_.userrefreshclient.html#projectid" class="tsd-kind-icon">project<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_auth_refreshclient_.userrefreshclient.html#tokenurl" class="tsd-kind-icon">token<wbr>Url</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_auth_refreshclient_.userrefreshclient.html#transporter" class="tsd-kind-icon">transporter</a>
@@ -1281,6 +1399,9 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_auth_refreshclient_.userrefreshclient.html#gettoken" class="tsd-kind-icon">get<wbr>Token</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_auth_refreshclient_.userrefreshclient.html#istokenexpiring" class="tsd-kind-icon">is<wbr>Token<wbr>Expiring</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_auth_refreshclient_.userrefreshclient.html#refreshaccesstoken" class="tsd-kind-icon">refresh<wbr>Access<wbr>Token</a>
 							</li>
@@ -1312,6 +1433,9 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_auth_refreshclient_.userrefreshclientoptions.html" class="tsd-kind-icon">User<wbr>Refresh<wbr>Client<wbr>Options</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

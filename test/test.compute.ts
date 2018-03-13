@@ -136,10 +136,6 @@ it('should retry calls to the metadata service if it returns non-200 errors',
      scopes.forEach(s => s.done());
    });
 
-it('should return false for createScopedRequired', () => {
-  assert.equal(false, compute.createScopedRequired());
-});
-
 it('should return a helpful message on request response.statusCode 403',
    async () => {
      // Mock the credentials object.  Make sure there's no expiry_date set.

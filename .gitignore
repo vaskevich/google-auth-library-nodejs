@@ -5,9 +5,7 @@ types/
 docs/
 npm-debug.log
 coverage
-*.js.map
 yarn-error.log
-**/*.js
 examples/*.keys.json
 !examples/**/*.js
 .nyc_output
